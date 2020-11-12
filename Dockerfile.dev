@@ -1,0 +1,11 @@
+# Install bas image
+FROM node:alpine
+
+# Configure image
+WORKDIR '/app'
+COPY package.json . 
+RUN npm install
+COPY . .
+
+# Start command
+CMD ["npm","run","start" ]
